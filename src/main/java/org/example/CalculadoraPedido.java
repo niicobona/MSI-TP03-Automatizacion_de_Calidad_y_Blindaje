@@ -29,24 +29,18 @@ public class CalculadoraPedido {
 
     return descuento;
   }
-}
 
-  public double calcularPrecio (
-        double precio,
-        int cantidad,
-        boolean premium,
-        boolean tieneCupon) {
+  public double calcularPrecio(double precio, int cantidad, boolean premium, boolean tieneCupon) {
 
     validarDatos(precio, cantidad);
 
-    double total = precio*cantidad;
+    double total = precio * cantidad;
     double descuento = calcularDescuentos(premium, tieneCupon);
 
     return total * descuento;
   }
 
-  
-  private void validarDatos(double precio, int cantidad){
+  private void validarDatos(double precio, int cantidad) {
     if (precio <= 0) {
       throw new IllegalArgumentException("Precio invalido");
     }
@@ -54,7 +48,6 @@ public class CalculadoraPedido {
       throw new IllegalArgumentException("Cantidad invalido");
     }
   }
-
 
   private double calcularDescuentos(boolean premium, boolean tieneCupon) {
     if (premium && tieneCupon) {
@@ -65,3 +58,4 @@ public class CalculadoraPedido {
     }
     return 1;
   }
+}

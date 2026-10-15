@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "--- INICIANDO CONTROLES DE CALIDAD ---"
+echo "--- INICIANDO CONTROLES DE CALIDAD PRE-COMMIT ---"
 
 echo ""
 echo "1. Verificando formato del codigo..."
